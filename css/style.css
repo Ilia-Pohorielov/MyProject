@@ -1,6 +1,55 @@
 body {
 	width: 1200px;
-	color: #fff;
-	background: #000;
 	margin: 0 auto;
+}
+.btn-2 {
+	display: block;
+	width: 200px;
+	text-align: center;
+	padding: 10px 0;
+	overflow: hidden;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	border-radius: 5px;
+	position: relative;
+	transition: all .3s ease;
+}
+.btn-2 span {
+	z-index: 9999;
+}
+.btn-2:before {
+	content: '';
+	display: block;
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: darkred;
+	transform: rotate(-68deg) translateY(-140px);
+	z-index: -1;
+	transition: all .3s ease;
+}
+.btn-2:after {
+	content: '';
+	display: block;
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: fuchsia;
+	transform: rotate(111deg) translateY(-117px);
+	z-index: -1;
+	transition: all .3s .1s ease;
+}
+.btn-2:hover span {
+	color: #fff;
+}
+.btn-2:hover::before {
+	transform: rotate(-68deg) translateY(-37px);
+}
+.btn-2:hover::after {
+	transform: rotate(111deg) translateY(-17px);
 }
